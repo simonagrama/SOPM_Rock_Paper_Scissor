@@ -1,0 +1,67 @@
+﻿/* --- STILURI BODY (FUNDALUL ÎNTREGULUI ECRAN) --- */
+
+body {
+    transition: background-color 0.5s ease;
+    /* Păstrează fundalul deschis implicit */
+    background-color: #f0f8ff; 
+}
+
+body.dark-mode-body {
+    background-color: #121212 !important; /* Fundal Negru */
+    color: #f0f0f0 !important;
+}
+
+/* --- STILURI CONTAINER JOC (dark-mode) --- */
+
+.dark-mode {
+    background: linear-gradient(135deg, #2c2c2c, #444444) !important;
+    border-color: #ffd700 !important; /* Auriu */
+    color: #f0f0f0 !important;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .game-title {
+    color: #ffd700 !important;
+}
+
+.dark-mode .round-display {
+    background-color: #2c2c2c !important;
+    border-color: #6a5acd !important;
+}
+
+.dark-mode h3,
+.dark-mode .player-score,
+.dark-mode .computer-score,
+.dark-mode .timer-display {
+    color: #cccccc !important;
+}
+
+.dark-mode .versus span {
+    color: #8a2be2 !important;
+}
+
+.dark-mode .score-board {
+    background-color: #2c2c2c !important;
+}
+
+.dark-mode .choice-button {
+    background-color: #444;
+    color: #fff;
+    border-color: #fff;
+}
+
+.dark-mode .result-image,
+.dark-mode .thinking-box {
+    background-color: #121212 !important;
+    border-color: #f0f0f0 !important;
+}
+
+.dark-mode .timeout-message {
+    background-color: #444444;
+}
+
+.dark-mode .initial-message {
+    background-color: #2c2c2c;
+    border-color: #ccc;
+    color: #ccc;
+}
