@@ -1,2 +1,10 @@
-Versiuni:
-1.0
+Versiunea 1.0
+Versiunea 1.1
+Versiunea 1.2
+Versiunea 1.3
+Versiunea 1.4
+Versiunea 1.5
+Versiunea 2.0
+Versiunea 2.1
+Versiunea 2.2
+Versiunea 2.3
