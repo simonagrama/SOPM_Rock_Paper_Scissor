@@ -30,11 +30,11 @@ const choiceMap = {
 
 // REGULI COMPLEXE (Cine bate pe cine)
 const beatsMap = {
-    ROCK: ['PAPER', 'SPOCK'],
-    PAPER: ['SCISSORS', 'LIZARD'],
-    SCISSORS: ['ROCK', 'SPOCK'],
-    LIZARD: ['ROCK', 'SCISSORS'],
-    SPOCK: ['PAPER', 'LIZARD']
+ROCK: ['LIZARD', 'SCISSORS'], // Piatra bate Șopârla și Foarfeca
+ PAPER: ['ROCK', 'SPOCK'], // Hârtia bate Piatra și Spock
+ SCISSORS: ['PAPER', 'LIZARD'], // Foarfeca bate Hârtia și Șopârla
+ LIZARD: ['SPOCK', 'PAPER'], // Șopârla bate Spock și Hârtia
+ SPOCK: ['SCISSORS', 'ROCK'] // Spock bate Foarfeca și Piatra
 };
 
 class Game extends Component {
@@ -248,24 +248,24 @@ class Game extends Component {
 
         return (
             <div className={containerClass}>
-                <h1 className="game-title">Piatră, Hârtie, Foarfecă, Șopârlă, Spock</h1>
                 
-                {/* Buton Dark Mode */}
+                {/* 1. BUTON DARK MODE (POZIȚIONARE DREAPTA SUS) */}
                 <button onClick={this.toggleDarkMode} className="dark-mode-toggle">
                     {isDark ? '☀️ Mod Luminos' : '🌙 Mod Întunecat'}
                 </button>
                 
-                {/* Selector Dificultate */}
-                <div className="difficulty-selector">
-                    <h3>Dificultate:</h3>
+                <h1 className="game-title">Piatră, Hârtie, Foarfecă, Șopârlă, Spock</h1>
+                
+                {/* 2. SELECTOR DIFICULTATE (NOU) */}
+                <div className="difficulty-settings">
                     <button 
                         onClick={() => this.setDifficulty('EASY')} 
-                        className={difficulty === 'EASY' ? 'active' : ''}
+                        className={`difficulty-button easy-button ${difficulty === 'EASY' ? 'active-difficulty' : ''}`}
                         disabled={isThinking || gameOver}
                     >Ușor</button>
                     <button 
                         onClick={() => this.setDifficulty('HARD')} 
-                        className={difficulty === 'HARD' ? 'active' : ''}
+                        className={`difficulty-button expert-button ${difficulty === 'HARD' ? 'active-difficulty' : ''}`}
                         disabled={isThinking || gameOver}
                     >Expert</button>
                 </div>
@@ -344,5 +344,4 @@ class Game extends Component {
     }
 }
 
-// !!! LINIA CRITICĂ DE EXPORT !!!
 export default Game;
