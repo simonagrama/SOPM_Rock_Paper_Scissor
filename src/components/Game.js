@@ -251,7 +251,7 @@ class Game extends Component {
                 
                 {/* 1. BUTON DARK MODE (POZIȚIONARE DREAPTA SUS) */}
                 <button onClick={this.toggleDarkMode} className="dark-mode-toggle">
-                    {isDark ? '☀️ Mod Luminos' : '🌙 Mod Întunecat'}
+                    {isDark ? '☀️' : '🌙'}
                 </button>
                 
                 <h1 className="game-title">Piatră, Hârtie, Foarfecă, Șopârlă, Spock</h1>
